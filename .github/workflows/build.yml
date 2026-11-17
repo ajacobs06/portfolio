@@ -45,4 +45,16 @@ jobs:
           tags: |
             ${{ env.IMAGE }}:${{ github.sha }}
             ${{ env.IMAGE }}:latest
+
+      - name: Deploy - point the cluster at new image
+        run: |
+          sed -i "s|image: ghcr.io/ajacobs06/portfolio:.*|image: ${IMAGE}:${GITHUB_SHA}" k8s/deployment.yaml
+          if git diff --quiet k8s/deployment.yaml; then
+            echo "No changes to deployment.yaml. Already deployed.";
+          else
+            git config user.name "github-actions[bot]"
+            git config user.email "github-actions[bot]@users.noreply.github.com"
+            git commit -am "Update deployment image to ${GITHUB_SHA::7}"
+            git push
+          fi
   
