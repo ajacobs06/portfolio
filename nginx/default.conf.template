@@ -1,0 +1,36 @@
+# Rendered at container start by the nginx image's envsubst step.
+# Only variables defined in the pod's environment (POD_NAME, NODE_NAME) are replaced;
+# nginx's own $variables are left alone.
+server {
+    listen 80;
+    server_name _;
+    root /usr/share/nginx/html;
+    index index.html;
+    server_tokens off;
+
+    gzip on;
+    gzip_comp_level 5;
+    gzip_types text/css application/javascript image/svg+xml application/json text/plain;
+
+    include /etc/nginx/snippets/security-headers.conf;
+
+    # Footer readout: which pod and node answered this request.
+    location = /served-by {
+        include /etc/nginx/snippets/security-headers.conf;
+        add_header Cache-Control "no-store" always;
+        default_type application/json;
+        return 200 '{"pod":"${POD_NAME}","node":"${NODE_NAME}"}';
+    }
+
+    location /assets/ {
+        include /etc/nginx/snippets/security-headers.conf;
+        add_header Cache-Control "public, max-age=3600" always;
+        try_files $uri =404;
+    }
+
+    location / {
+        try_files $uri $uri/ =404;
+    }
+
+    error_page 404 /404.html;
+}

@@ -30,6 +30,15 @@ spec:
           image: ghcr.io/ajacobs06/portfolio:4a6ba1e5cb4fae95e7665a2b6ae44cd363413f50
           ports:
             - containerPort: 80
+          env:
+            - name: POD_NAME
+              valueFrom:
+                fieldRef:
+                  fieldPath: metadata.name
+            - name: NODE_NAME
+              valueFrom:
+                fieldRef:
+                  fieldPath: spec.nodeName
           resources:
             requests:
               cpu: 10m

@@ -6,6 +6,7 @@ on:
     branches: [main]
     paths:
       - 'site/**'
+      - 'nginx/**'
       - 'Dockerfile'
 
   workflow_dispatch:

@@ -1,6 +1,236 @@
-<html>
-    <h1>Welcome to My Website</h1>
-    <body>
-        <p>This is my first webpage!</p>
-    </body>
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Arthur Jacobs · IT, systems and cloud</title>
+<meta name="description" content="Arthur Jacobs: Maths and Computer Science student at the University of Birmingham, on an industrial year as an IT engineer. Projects in IT, systems, cloud and DevOps.">
+<meta name="theme-color" content="#F1EDE8">
+<meta property="og:title" content="Arthur Jacobs · IT, systems and cloud">
+<meta property="og:description" content="Industrial-year IT engineer and Maths and Computer Science student. Homelab Kubernetes, Azure and PowerShell automation.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://ajacobs.dev/">
+<link rel="canonical" href="https://ajacobs.dev/">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="/assets/fonts/inter-tight-var.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/dseg7-bold.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/css/main.css?v=10">
+<script src="/assets/js/main.js?v=5" defer></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="top">
+  <div class="wrap top__in">
+    <a class="top__name" href="#top">Arthur Jacobs</a>
+    <nav class="top__nav" aria-label="Primary">
+      <a href="#work" data-nav="work">Work</a>
+      <a href="#infrastructure" data-nav="infrastructure">Infrastructure</a>
+      <a href="#about" data-nav="about">About</a>
+      <a href="#contact" data-nav="contact">Contact</a>
+    </nav>
+    <a class="top__cv" href="/cv/Arthur-Jacobs-CV.pdf" download>CV<svg class="ic" viewBox="0 0 256 256" aria-hidden="true"><path d="M224,144v64a8,8,0,0,1-8,8H40a8,8,0,0,1-8-8V144a8,8,0,0,1,16,0v56H208V144a8,8,0,0,1,16,0Zm-101.66,5.66a8,8,0,0,0,11.32,0l40-40a8,8,0,0,0-11.32-11.32L136,124.69V32a8,8,0,0,0-16,0v92.69L93.66,98.34a8,8,0,0,0-11.32,11.32Z"/></svg></a>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- HERO -->
+  <section class="hero wrap" id="top" aria-labelledby="hero-title">
+    <div class="hero__copy">
+      <p class="hero__who"><span class="dot" aria-hidden="true"></span>Arthur Jacobs, IT engineer at Pickl</p>
+      <h1 class="hero__title" id="hero-title">I look after IT for 50 small businesses, and run Kubernetes at home</h1>
+      <p class="hero__sub">Maths and Computer Science student at the University of Birmingham, spending my industrial year at an MSP. I write the PowerShell that saves the team hours each week, and the page you're reading is served from my homelab.</p>
+      <div class="hero__ctas">
+        <a class="btn btn--primary" href="#contact">Get in touch</a>
+        <a class="btn btn--quiet" href="#work">See the work</a>
+      </div>
+    </div>
+
+    <aside class="panel live" aria-labelledby="live-title">
+      <div class="live__head">
+        <h2 class="lab" id="live-title">This page, just now</h2>
+        <span class="meta">ajacobs.dev</span>
+      </div>
+      <div class="live__fig">
+        <span class="win win--xl"><span class="led" id="rtt" data-ghost="888">---</span></span>
+        <span class="live__unit">ms round trip<br>to my homelab</span>
+      </div>
+      <p class="live__by" id="served">Served by one of three nginx pods on a k3s cluster in my homelab.</p>
+      <a class="live__link" href="#infrastructure">See the route it took<svg class="ic" viewBox="0 0 256 256" aria-hidden="true"><path d="M205.66,149.66l-72,72a8,8,0,0,1-11.32,0l-72-72a8,8,0,0,1,11.32-11.32L120,196.69V40a8,8,0,0,1,16,0V196.69l58.34-58.35a8,8,0,0,1,11.32,11.32Z"/></svg></a>
+    </aside>
+  </section>
+
+  <!-- WORK -->
+  <section class="section wrap" id="work" data-section="work" aria-labelledby="work-title">
+    <div class="section__head">
+      <div>
+        <h2 class="h2" id="work-title">From the service desk to the homelab</h2>
+        <p class="lede">What I've done in my industrial year, and what I build in my own time.</p>
+      </div>
+      <div class="filter" role="group" aria-label="Filter projects by role">
+        <span class="lab">Filter by role</span>
+        <div class="filter__row">
+          <div class="seg">
+            <button type="button" data-role="all" aria-pressed="true">All</button>
+            <button type="button" data-role="it" aria-pressed="false">IT support</button>
+            <button type="button" data-role="systems" aria-pressed="false">Systems</button>
+            <button type="button" data-role="cloud" aria-pressed="false">Cloud</button>
+            <button type="button" data-role="devops" aria-pressed="false">DevOps</button>
+          </div>
+          <span class="win" aria-hidden="true"><span class="led" id="match-count" data-ghost="88">10</span></span>
+        </div>
+      </div>
+    </div>
+
+    <div class="group">
+      <div class="group__head"><h3 class="h3">Industrial year</h3><span class="meta">Pickl · 2026 to now</span></div>
+      <ul class="panel rows">
+        <li class="row row--feature" data-roles="it systems">
+          <div class="row__main">
+            <h4 class="row__title">Laptop build script</h4>
+            <p class="row__desc">A PowerShell script that sets up a company laptop end to end: apps, configuration and VPN. A new starter's machine goes from unboxed to ready without anyone clicking through it.</p>
+            <p class="meta">PowerShell · winget · Intune</p>
+          </div>
+          <dl class="figs">
+            <div class="fig"><dt>Lines of PowerShell</dt><dd><span class="win win--lg"><span class="led" data-ghost="8888">3000</span></span></dd></div>
+            <div class="fig"><dt>Hours saved a week</dt><dd><span class="win win--lg"><span class="led" data-ghost="8888">4</span></span></dd></div>
+          </dl>
+        </li>
+        <li class="row" data-roles="it systems">
+          <div class="row__main"><h4 class="row__title">Silent VPN deployment</h4><p class="row__desc">Pushes an L2TP/IPsec profile from the RMM with its credentials saved, then checks they stuck without prompting anyone.</p></div>
+          <p class="meta row__stack">PowerShell · RAS API</p>
+          <a class="row__link" href="https://github.com/ajacobs06/ps-silent-vpn-deployment" rel="noopener">Write-up<svg class="ic" viewBox="0 0 256 256" aria-hidden="true"><path d="M200,64V168a8,8,0,0,1-16,0V83.31L69.66,197.66a8,8,0,0,1-11.32-11.32L172.69,72H88a8,8,0,0,1,0-16H192A8,8,0,0,1,200,64Z"/></svg></a>
+        </li>
+        <li class="row" data-roles="systems devops">
+          <div class="row__main"><h4 class="row__title">AI agent for the company</h4><p class="row__desc">Built Pickl an agentic AI assistant that connects to the company's other systems through REST API integrations.</p></div>
+          <p class="meta row__stack">REST APIs · Agentic AI</p>
+          <span class="row__link" aria-hidden="true"></span>
+        </li>
+        <li class="row" data-roles="it cloud">
+          <div class="row__main"><h4 class="row__title">Microsoft 365 and identity</h4><p class="row__desc">Day-to-day admin of Microsoft 365 and Google Workspace for over 50 SME clients, including Intune and Entra ID.</p></div>
+          <p class="meta row__stack">Entra ID · Intune</p>
+          <span class="row__link" aria-hidden="true"></span>
+        </li>
+        <li class="row" data-roles="it systems">
+          <div class="row__main"><h4 class="row__title">Email security rollout</h4><p class="row__desc">Rolled out Barracuda and Mesh for phishing detection and incident response across client tenants.</p></div>
+          <p class="meta row__stack">Barracuda · Mesh</p>
+          <span class="row__link" aria-hidden="true"></span>
+        </li>
+        <li class="row" data-roles="systems">
+          <div class="row__main"><h4 class="row__title">Client networks</h4><p class="row__desc">Set up and maintain networks of more than 200 devices on UniFi, with Sophos firewalls.</p></div>
+          <p class="meta row__stack">UniFi · Sophos</p>
+          <span class="row__link" aria-hidden="true"></span>
+        </li>
+      </ul>
+    </div>
+
+    <div class="group">
+      <div class="group__head"><h3 class="h3">Personal projects</h3><span class="meta">Own time</span></div>
+      <ul class="panel rows">
+        <li class="row" data-roles="cloud devops">
+          <div class="row__main"><h4 class="row__title">Rehearsal Hub <span class="tag"><span class="dot" aria-hidden="true"></span>Live</span></h4><p class="row__desc">Members app for the university barbershop society, running on Azure. Infrastructure in Bicep, deployed by GitHub Actions over OIDC with no stored secrets.</p></div>
+          <p class="meta row__stack">Azure · Bicep · FastAPI · React · Cosmos DB</p>
+          <a class="row__link" href="https://github.com/ajacobs06/rehearsal-hub-showcase" rel="noopener">Code<svg class="ic" viewBox="0 0 256 256" aria-hidden="true"><path d="M200,64V168a8,8,0,0,1-16,0V83.31L69.66,197.66a8,8,0,0,1-11.32-11.32L172.69,72H88a8,8,0,0,1,0-16H192A8,8,0,0,1,200,64Z"/></svg></a>
+        </li>
+        <li class="row" data-roles="devops cloud systems">
+          <div class="row__main"><h4 class="row__title">Homelab cluster and this site <span class="tag"><span class="dot" aria-hidden="true"></span>Live</span></h4><p class="row__desc">k3s across a Proxmox VM and two Raspberry Pis. Flux deploys from Git and a Cloudflare Tunnel publishes it, with no open ports.</p></div>
+          <p class="meta row__stack">k3s · Flux · Docker · Cloudflare · Proxmox</p>
+          <a class="row__link" href="#infrastructure">How it works<svg class="ic" viewBox="0 0 256 256" aria-hidden="true"><path d="M205.66,149.66l-72,72a8,8,0,0,1-11.32,0l-72-72a8,8,0,0,1,11.32-11.32L120,196.69V40a8,8,0,0,1,16,0V196.69l58.34-58.35a8,8,0,0,1,11.32,11.32Z"/></svg></a>
+        </li>
+        <li class="row" data-roles="systems devops">
+          <div class="row__main"><h4 class="row__title">rackdash <span class="tag"><span class="dot" aria-hidden="true"></span>Running</span></h4><p class="row__desc">A touchscreen status board for the homelab. It watches Proxmox, k3s, Home Assistant and the network, and alerts my phone when something drops.</p></div>
+          <p class="meta row__stack">Python · FastAPI · Kubernetes API · Proxmox API</p>
+          <span class="row__link" aria-hidden="true"></span>
+        </li>
+        <li class="row" data-roles="">
+          <div class="row__main"><h4 class="row__title">Text-based game engine</h4><p class="row__desc">A Java parser that builds a whole adventure game from a single text file.</p></div>
+          <p class="meta row__stack">Java · Parsing</p>
+          <a class="row__link" href="https://github.com/ajacobs06/Text-Based-Game" rel="noopener">Source<svg class="ic" viewBox="0 0 256 256" aria-hidden="true"><path d="M200,64V168a8,8,0,0,1-16,0V83.31L69.66,197.66a8,8,0,0,1-11.32-11.32L172.69,72H88a8,8,0,0,1,0-16H192A8,8,0,0,1,200,64Z"/></svg></a>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- INFRASTRUCTURE (the one full-hardware section) -->
+  <section class="infra" id="infrastructure" data-section="infrastructure" aria-labelledby="infra-title">
+    <div class="wrap">
+      <div class="infra__shell">
+        <div class="infra__head">
+          <div>
+            <h2 class="h2" id="infra-title">How this page reached you</h2>
+            <p class="lede lede--dim">A static site in nginx, running as three pods on a k3s cluster at home. A Cloudflare Tunnel publishes it with no open ports, and Flux deploys every change from Git. The dots below light up each time your browser checks in.</p>
+          </div>
+          <dl class="readouts" aria-label="Cluster status">
+            <div class="readout"><dt>Nodes</dt><dd><span class="win win--lg"><span class="led" data-ghost="8">3</span></span></dd></div>
+            <div class="readout"><dt>Site pods</dt><dd><span class="win win--lg"><span class="led" data-ghost="8">3</span></span></dd></div>
+            <div class="readout"><dt>Tunnels</dt><dd><span class="win win--lg"><span class="led" data-ghost="8">2</span></span></dd></div>
+          </dl>
+        </div>
+
+        <ol class="hops" aria-label="Request path">
+          <li class="hop"><span class="hop__dot" aria-hidden="true"></span><span class="hop__lab">Edge</span><strong>Cloudflare</strong><p>DNS, TLS and cache. My home IP stays hidden.</p></li>
+          <li class="hop"><span class="hop__dot" aria-hidden="true"></span><span class="hop__lab">Link</span><strong>Tunnel</strong><p>Two cloudflared pods, one on each Pi, dial out to Cloudflare. Nothing is open on my router.</p></li>
+          <li class="hop"><span class="hop__dot" aria-hidden="true"></span><span class="hop__lab">Ingress</span><strong>Traefik</strong><p>The k3s built-in ingress routes ajacobs.dev to the site's Service.</p></li>
+          <li class="hop"><span class="hop__dot" aria-hidden="true"></span><span class="hop__lab">Workload</span><strong>Pods</strong><p>Three nginx:alpine pods with the site built into the image.</p></li>
+          <li class="hop"><span class="hop__dot" aria-hidden="true"></span><span class="hop__lab">Compute</span><strong>Nodes</strong><p>A Proxmox VM (amd64) and two Raspberry Pis (arm64).</p></li>
+        </ol>
+
+        <p class="infra__foot"><span class="infra__foot-lab">Deploys</span><span>git push, then GitHub Actions builds for amd64 and arm64, GHCR stores the image and Flux applies it. Rolling back is one git revert.</span></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="section wrap" id="about" data-section="about" aria-labelledby="about-title">
+    <div class="about">
+      <div class="about__intro">
+        <h2 class="h2" id="about-title">Maths student, working engineer</h2>
+        <p class="lede">I'm in the third year of four at Birmingham, spending it as an IT engineer. Most of my day is identity, endpoints and networks for small businesses. Most evenings it's the homelab.</p>
+        <dl class="skills" aria-label="What I work with">
+          <div><dt>Endpoints and identity</dt><dd>Intune, Entra ID, Microsoft 365, Google Workspace, NinjaOne, ConnectWise, winget</dd></div>
+          <div><dt>Networks and security</dt><dd>UniFi, Sophos, Barracuda, Mesh, WireGuard, Cloudflare</dd></div>
+          <div><dt>Cloud and delivery</dt><dd>Azure, Bicep, GitHub Actions, Docker, k3s, Flux, Proxmox</dd></div>
+          <div><dt>Code</dt><dd>PowerShell, Python, Java, SQL, Bash, Microsoft Graph</dd></div>
+        </dl>
+      </div>
+      <dl class="panel facts">
+        <div><dt>Studying</dt><dd><strong>BSc Mathematics and Computer Science with Industrial Year</strong><span>University of Birmingham, on track for a First. Final year 2027 to 28</span></dd></div>
+        <div><dt>Part-time</dt><dd><strong>Technical Assistant, Guild of Students</strong><span>Lighting and sound for club nights and six musicals</span></dd></div>
+        <div><dt>Founded</dt><dd><strong>UoB Barbershop Singing Society</strong><span>President, 2025 to 2026</span></dd></div>
+        <div><dt>Earlier</dt><dd><strong>CyberFirst Futures, National Cyber Security Centre</strong><span>Two-week cyber security course, 2022</span></dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="section wrap" id="contact" data-section="contact" aria-labelledby="contact-title">
+    <div class="panel contact">
+      <div class="contact__copy">
+        <h2 class="h2 contact__title" id="contact-title">Get in touch</h2>
+        <p class="lede">Open to internships and graduate roles in IT, systems, cloud and DevOps.</p>
+        <div class="contact__ctas">
+          <a class="btn btn--primary" href="mailto:arthurjacobs.work@gmail.com">Email me</a>
+          <button type="button" class="btn btn--quiet copy" data-copy="arthurjacobs.work@gmail.com" hidden>
+            <svg class="ic copy__i1" viewBox="0 0 256 256" aria-hidden="true"><path d="M216,32H88a8,8,0,0,0-8,8V80H40a8,8,0,0,0-8,8V216a8,8,0,0,0,8,8H168a8,8,0,0,0,8-8V176h40a8,8,0,0,0,8-8V40A8,8,0,0,0,216,32ZM160,208H48V96H160Zm48-48H176V88a8,8,0,0,0-8-8H96V48H208Z"/></svg>
+            <svg class="ic copy__i2" viewBox="0 0 256 256" aria-hidden="true"><path d="M229.66,77.66l-128,128a8,8,0,0,1-11.32,0l-56-56a8,8,0,0,1,11.32-11.32L96,188.69,218.34,66.34a8,8,0,0,1,11.32,11.32Z"/></svg>
+            <span class="copy__txt">arthurjacobs.work@gmail.com</span>
+          </button>
+        </div>
+      </div>
+      <ul class="links">
+        <li><a href="https://www.linkedin.com/in/arthur-jacobs-uk" rel="me noopener"><span>LinkedIn</span><svg class="ic" viewBox="0 0 256 256" aria-hidden="true"><path d="M200,64V168a8,8,0,0,1-16,0V83.31L69.66,197.66a8,8,0,0,1-11.32-11.32L172.69,72H88a8,8,0,0,1,0-16H192A8,8,0,0,1,200,64Z"/></svg></a></li>
+        <li><a href="https://github.com/ajacobs06" rel="me noopener"><span>GitHub</span><svg class="ic" viewBox="0 0 256 256" aria-hidden="true"><path d="M200,64V168a8,8,0,0,1-16,0V83.31L69.66,197.66a8,8,0,0,1-11.32-11.32L172.69,72H88a8,8,0,0,1,0-16H192A8,8,0,0,1,200,64Z"/></svg></a></li>
+        <li><a href="/cv/Arthur-Jacobs-CV.pdf" download><span>CV (PDF)</span><svg class="ic" viewBox="0 0 256 256" aria-hidden="true"><path d="M224,144v64a8,8,0,0,1-8,8H40a8,8,0,0,1-8-8V144a8,8,0,0,1,16,0v56H208V144a8,8,0,0,1,16,0Zm-101.66,5.66a8,8,0,0,0,11.32,0l40-40a8,8,0,0,0-11.32-11.32L136,124.69V32a8,8,0,0,0-16,0v92.69L93.66,98.34a8,8,0,0,0-11.32,11.32Z"/></svg></a></li>
+      </ul>
+    </div>
+  </section>
+
+</main>
+
+<footer class="foot wrap">
+  <span>© 2026 Arthur Jacobs</span>
+  <a href="https://github.com/ajacobs06/portfolio" rel="noopener">Source on GitHub</a>
+</footer>
+</body>
 </html>
