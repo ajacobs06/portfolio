@@ -48,7 +48,7 @@ jobs:
 
       - name: Deploy - point the cluster at new image
         run: |
-          sed -i "s|image: ghcr.io/ajacobs06/portfolio:.*|image: ${IMAGE}:${GITHUB_SHA}" k8s/deployment.yaml
+          sed -i "s|image: ghcr.io/ajacobs06/portfolio:.*|image: ${IMAGE}:${GITHUB_SHA}|" k8s/deployment.yaml
           if git diff --quiet k8s/deployment.yaml; then
             echo "No changes to deployment.yaml. Already deployed.";
           else
