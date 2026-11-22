@@ -39,8 +39,8 @@
   <section class="hero wrap" id="top" aria-labelledby="hero-title">
     <div class="hero__copy">
       <p class="hero__who"><span class="dot" aria-hidden="true"></span>Arthur Jacobs, IT engineer at Pickl</p>
-      <h1 class="hero__title" id="hero-title">I look after IT for 50 small businesses, and run Kubernetes at home</h1>
-      <p class="hero__sub">Maths and Computer Science student at the University of Birmingham, spending my industrial year at an MSP. I write the PowerShell that saves the team hours each week, and the page you're reading is served from my homelab.</p>
+      <h1 class="hero__title" id="hero-title">I develop and maintain IT infrastructure for over 50 small businesses.</h1>
+      <p class="hero__sub">Maths and Computer Science student at the University of Birmingham, spending my industrial year at an MSP. This is my portfolio, hosted at home on my K8s cluster.</p>
       <div class="hero__ctas">
         <a class="btn btn--primary" href="#contact">Get in touch</a>
         <a class="btn btn--quiet" href="#work">See the work</a>
@@ -66,7 +66,7 @@
     <div class="section__head">
       <div>
         <h2 class="h2" id="work-title">From the service desk to the homelab</h2>
-        <p class="lede">What I've done in my industrial year, and what I build in my own time.</p>
+        <p class="lede">What I've done in my placement year, and what I build in my own time.</p>
       </div>
       <div class="filter" role="group" aria-label="Filter projects by role">
         <span class="lab">Filter by role</span>
@@ -84,7 +84,7 @@
     </div>
 
     <div class="group">
-      <div class="group__head"><h3 class="h3">Industrial year</h3><span class="meta">Pickl · 2026 to now</span></div>
+      <div class="group__head"><h3 class="h3">Placement year</h3><span class="meta">Pickl · 2026 to now</span></div>
       <ul class="panel rows">
         <li class="row row--feature" data-roles="it systems">
           <div class="row__main">
@@ -92,10 +92,6 @@
             <p class="row__desc">A PowerShell script that sets up a company laptop end to end: apps, configuration and VPN. A new starter's machine goes from unboxed to ready without anyone clicking through it.</p>
             <p class="meta">PowerShell · winget · Intune</p>
           </div>
-          <dl class="figs">
-            <div class="fig"><dt>Lines of PowerShell</dt><dd><span class="win win--lg"><span class="led" data-ghost="8888">3000</span></span></dd></div>
-            <div class="fig"><dt>Hours saved a week</dt><dd><span class="win win--lg"><span class="led" data-ghost="8888">4</span></span></dd></div>
-          </dl>
         </li>
         <li class="row" data-roles="it systems">
           <div class="row__main"><h4 class="row__title">Silent VPN deployment</h4><p class="row__desc">Pushes an L2TP/IPsec profile from the RMM with its credentials saved, then checks they stuck without prompting anyone.</p></div>
@@ -103,8 +99,8 @@
           <a class="row__link" href="https://github.com/ajacobs06/ps-silent-vpn-deployment" rel="noopener">Write-up<svg class="ic" viewBox="0 0 256 256" aria-hidden="true"><path d="M200,64V168a8,8,0,0,1-16,0V83.31L69.66,197.66a8,8,0,0,1-11.32-11.32L172.69,72H88a8,8,0,0,1,0-16H192A8,8,0,0,1,200,64Z"/></svg></a>
         </li>
         <li class="row" data-roles="systems devops">
-          <div class="row__main"><h4 class="row__title">AI agent for the company</h4><p class="row__desc">Built Pickl an agentic AI assistant that connects to the company's other systems through REST API integrations.</p></div>
-          <p class="meta row__stack">REST APIs · Agentic AI</p>
+          <div class="row__main"><h4 class="row__title">AI agent for the company</h4><p class="row__desc">Developed an MCP server in Azure, using ACR, to give our agentic models oversight of our tickets.</p></div>
+          <p class="meta row__stack">REST APIs · Azure </p>
           <span class="row__link" aria-hidden="true"></span>
         </li>
         <li class="row" data-roles="it cloud">
@@ -129,7 +125,7 @@
       <div class="group__head"><h3 class="h3">Personal projects</h3><span class="meta">Own time</span></div>
       <ul class="panel rows">
         <li class="row" data-roles="cloud devops">
-          <div class="row__main"><h4 class="row__title">Rehearsal Hub <span class="tag"><span class="dot" aria-hidden="true"></span>Live</span></h4><p class="row__desc">Members app for the university barbershop society, running on Azure. Infrastructure in Bicep, deployed by GitHub Actions over OIDC with no stored secrets.</p></div>
+          <div class="row__main"><h4 class="row__title">Rehearsal Hub <span class="tag"><span class="dot" aria-hidden="true"></span>Live</span></h4><p class="row__desc">Members app for the university barbershop society, running on Azure. Now used by over 30 active members.Infrastructure in Bicep, deployed by GitHub Actions over OIDC with no stored secrets.</p></div>
           <p class="meta row__stack">Azure · Bicep · FastAPI · React · Cosmos DB</p>
           <a class="row__link" href="https://github.com/ajacobs06/rehearsal-hub-showcase" rel="noopener">Code<svg class="ic" viewBox="0 0 256 256" aria-hidden="true"><path d="M200,64V168a8,8,0,0,1-16,0V83.31L69.66,197.66a8,8,0,0,1-11.32-11.32L172.69,72H88a8,8,0,0,1,0-16H192A8,8,0,0,1,200,64Z"/></svg></a>
         </li>
@@ -188,7 +184,7 @@
         <h2 class="h2" id="about-title">Maths student, working engineer</h2>
         <p class="lede">I'm in the third year of four at Birmingham, spending it as an IT engineer. Most of my day is identity, endpoints and networks for small businesses. Most evenings it's the homelab.</p>
         <dl class="skills" aria-label="What I work with">
-          <div><dt>Endpoints and identity</dt><dd>Intune, Entra ID, Microsoft 365, Google Workspace, NinjaOne, ConnectWise, winget</dd></div>
+          <div><dt>Endpoints and identity</dt><dd>Intune, Entra ID, Microsoft 365, Google Workspace, NinjaOne</dd></div>
           <div><dt>Networks and security</dt><dd>UniFi, Sophos, Barracuda, Mesh, WireGuard, Cloudflare</dd></div>
           <div><dt>Cloud and delivery</dt><dd>Azure, Bicep, GitHub Actions, Docker, k3s, Flux, Proxmox</dd></div>
           <div><dt>Code</dt><dd>PowerShell, Python, Java, SQL, Bash, Microsoft Graph</dd></div>
