@@ -247,16 +247,6 @@ a.row__link:hover { color: var(--accent-ink); }
   .row__link { justify-self: end; }
 }
 
-.row--feature { padding-block: 32px; }
-.row--feature .row__title { font-size: 28px; line-height: 32px; letter-spacing: -.02em; }
-.row--feature .row__desc { margin-top: 8px; font-size: 17px; line-height: 26px; margin-bottom: 16px; }
-.figs { display: flex; gap: 32px; flex-wrap: wrap; }
-.fig { display: grid; gap: 8px; }
-.fig dt { font-size: 13px; line-height: 20px; color: var(--alu-muted); }
-@media (min-width: 900px) {
-  .row--feature { grid-template-columns: minmax(0, 1fr) auto; align-items: center; gap: 48px; }
-}
-
 /* ---------- infrastructure (the hardware section) ---------- */
 .infra { padding-block: 16px; }
 .infra__shell {
