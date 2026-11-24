@@ -65,7 +65,7 @@
   <section class="section wrap" id="work" data-section="work" aria-labelledby="work-title">
     <div class="section__head">
       <div>
-        <h2 class="h2" id="work-title">From the service desk to the homelab</h2>
+        <h2 class="h2" id="work-title">My projects</h2>
         <p class="lede">What I've done in my placement year, and what I build in my own time.</p>
       </div>
       <div class="filter" role="group" aria-label="Filter projects by role">
@@ -152,8 +152,8 @@
       <div class="infra__shell">
         <div class="infra__head">
           <div>
-            <h2 class="h2" id="infra-title">How this page reached you</h2>
-            <p class="lede lede--dim">A static site in nginx, running as three pods on a k3s cluster at home. A Cloudflare Tunnel publishes it with no open ports, and Flux deploys every change from Git. The dots below light up each time your browser checks in.</p>
+            <h2 class="h2" id="infra-title">How this website is hosted</h2>
+            <p class="lede lede--dim">A site in nginx, running as three pods on a kubernetes cluster in my homelab. A Cloudflare Tunnel publishes it with no open ports, Flux deploys every change from Git. The dots below light up each time your browser checks in.</p>
           </div>
           <dl class="readouts" aria-label="Cluster status">
             <div class="readout"><dt>Nodes</dt><dd><span class="win win--lg"><span class="led" data-ghost="8">3</span></span></dd></div>
@@ -164,10 +164,10 @@
 
         <ol class="hops" aria-label="Request path">
           <li class="hop"><span class="hop__dot" aria-hidden="true"></span><span class="hop__lab">Edge</span><strong>Cloudflare</strong><p>DNS, TLS and cache. My home IP stays hidden.</p></li>
-          <li class="hop"><span class="hop__dot" aria-hidden="true"></span><span class="hop__lab">Link</span><strong>Tunnel</strong><p>Two cloudflared pods, one on each Pi, dial out to Cloudflare. Nothing is open on my router.</p></li>
-          <li class="hop"><span class="hop__dot" aria-hidden="true"></span><span class="hop__lab">Ingress</span><strong>Traefik</strong><p>The k3s built-in ingress routes ajacobs.dev to the site's Service.</p></li>
+          <li class="hop"><span class="hop__dot" aria-hidden="true"></span><span class="hop__lab">Link</span><strong>Tunnel</strong><p>Two cloudflared pods, one on each Pi, send the site out to Cloudflare so there are no open ports..</p></li>
+          <li class="hop"><span class="hop__dot" aria-hidden="true"></span><span class="hop__lab">Ingress</span><strong>Traefik</strong><p>The kubernetes built-in ingress routes ajacobs.dev to the site's Service.</p></li>
           <li class="hop"><span class="hop__dot" aria-hidden="true"></span><span class="hop__lab">Workload</span><strong>Pods</strong><p>Three nginx:alpine pods with the site built into the image.</p></li>
-          <li class="hop"><span class="hop__dot" aria-hidden="true"></span><span class="hop__lab">Compute</span><strong>Nodes</strong><p>A Proxmox VM (amd64) and two Raspberry Pis (arm64).</p></li>
+          <li class="hop"><span class="hop__dot" aria-hidden="true"></span><span class="hop__lab">Compute</span><strong>Nodes</strong><p>A Proxmox VM and two Raspberry Pis.</p></li>
         </ol>
 
         <p class="infra__foot"><span class="infra__foot-lab">Deploys</span><span>git push, then GitHub Actions builds for amd64 and arm64, GHCR stores the image and Flux applies it. Rolling back is one git revert.</span></p>
@@ -179,19 +179,19 @@
   <section class="section wrap" id="about" data-section="about" aria-labelledby="about-title">
     <div class="about">
       <div class="about__intro">
-        <h2 class="h2" id="about-title">Maths student, working engineer</h2>
-        <p class="lede">I'm in the third year of four at Birmingham, spending it as an IT engineer. Most of my day is identity, endpoints and networks for small businesses. Most evenings it's the homelab.</p>
+        <h2 class="h2" id="about-title">Computer science student, working engineer</h2>
+        <p class="lede">I'm in the third year of four at Birmingham, spending it as an IT engineer. I work on site handling large scale projects, as well as handling infrastructure and support tickets remotely.</p>
         <dl class="skills" aria-label="What I work with">
-          <div><dt>Endpoints and identity</dt><dd>Intune, Entra ID, Microsoft 365, Google Workspace, NinjaOne</dd></div>
+          <div><dt>Endpoints and identity</dt><dd>Intune, Entra ID, Microsoft 365, Google Workspace</dd></div>
           <div><dt>Networks and security</dt><dd>UniFi, Sophos, Barracuda, Mesh, WireGuard, Cloudflare</dd></div>
-          <div><dt>Cloud and delivery</dt><dd>Azure, Bicep, GitHub Actions, Docker, k3s, Flux, Proxmox</dd></div>
-          <div><dt>Code</dt><dd>PowerShell, Python, Java, SQL, Bash, Microsoft Graph</dd></div>
+          <div><dt>Cloud and delivery</dt><dd>Azure, Bicep, GitHub Actions, Docker, Kubernetes, Flux, Proxmox</dd></div>
+          <div><dt>Code</dt><dd>PowerShell, Python, Java, SQL, Bash</dd></div>
         </dl>
       </div>
       <dl class="panel facts">
-        <div><dt>Studying</dt><dd><strong>BSc Mathematics and Computer Science with Industrial Year</strong><span>University of Birmingham, on track for a First. Final year 2027 to 28</span></dd></div>
-        <div><dt>Part-time</dt><dd><strong>Technical Assistant, Guild of Students</strong><span>Lighting and sound for club nights and six musicals</span></dd></div>
-        <div><dt>Founded</dt><dd><strong>UoB Barbershop Singing Society</strong><span>President, 2025 to 2026</span></dd></div>
+        <div><dt>Studying</dt><dd><strong>BSc Mathematics and Computer Science with Industrial Year</strong><span>University of Birmingham, on track for a First. Graduating summer 2028</span></dd></div>
+        <div><dt>Part-time</dt><dd><strong>Technical Assistant, Guild of Students</strong><span>Lighting and sound for large scale productions, from pantos to concerts</span></dd></div>
+        <div><dt>Founded</dt><dd><strong>UoB Barbershop Singing Society</strong><span>President, 2025 to 2026. Grew from nothing to over 30 members</span></dd></div>
         <div><dt>Earlier</dt><dd><strong>CyberFirst Futures, National Cyber Security Centre</strong><span>Two-week cyber security course, 2022</span></dd></div>
       </dl>
     </div>
