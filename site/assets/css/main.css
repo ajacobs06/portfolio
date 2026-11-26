@@ -111,6 +111,7 @@ button { font: inherit; color: inherit; }
 }
 .win--lg .led { font-size: 24px; }
 .win--xl .led { font-size: 48px; }
+.win__unit { align-self: flex-end; margin-left: 8px; font-family: var(--mono); font-size: 18px; font-weight: 600; line-height: 1; color: var(--led); text-shadow: 0 0 4px rgba(255, 59, 38, .5); }
 .led::before { content: attr(data-ghost); position: absolute; right: 0; top: 0; z-index: -1; color: var(--ghost); text-shadow: none; }
 /* DSEG7 digits share one width, so a window sized in ch fits its unlit 8s exactly */
 .led { text-align: right; }
