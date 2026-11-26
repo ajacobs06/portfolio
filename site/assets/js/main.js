@@ -31,28 +31,6 @@
     $$("[data-section], .hero").forEach((s) => spy.observe(s));
   }
 
-  /* ---------- work: filter by role ---------- */
-  const roleKeys = $$("[data-role]");
-  const rows = $$(".row");
-  const matchCount = $("#match-count");
-  const roleNames = { all: "all roles", it: "IT support", systems: "systems", cloud: "cloud", devops: "DevOps" };
-  const setRole = (role) => {
-    let n = 0;
-    roleKeys.forEach((k) => k.setAttribute("aria-pressed", String(k.dataset.role === role)));
-    rows.forEach((r) => {
-      const roles = (r.dataset.roles || "").split(/\s+/).filter(Boolean);
-      const hit = role === "all" || roles.includes(role);
-      r.classList.toggle("is-off", !hit);
-      if (hit) n += 1;
-    });
-    if (matchCount) matchCount.textContent = String(n);
-    announce(role === "all" ? `Showing all ${n} projects` : `${n} of ${rows.length} projects fit ${roleNames[role]}`);
-  };
-  roleKeys.forEach((k) => k.addEventListener("click", () => {
-    const already = k.getAttribute("aria-pressed") === "true";
-    setRole(already && k.dataset.role !== "all" ? "all" : k.dataset.role);
-  }));
-
   /* ---------- live: round trip to the cluster, which pod answered ---------- */
   // Each reply lights the request path once, edge to node, so the dots only move
   // when a real request has just gone through them.

@@ -68,52 +68,24 @@
         <h2 class="h2" id="work-title">My Projects</h2>
         <p class="lede">Projects I've worked on, personally and professionally.</p>
       </div>
-      <div class="filter" role="group" aria-label="Filter projects by role">
-        <span class="lab">Filter by role</span>
-        <div class="filter__row">
-          <div class="seg">
-            <button type="button" data-role="all" aria-pressed="true">All</button>
-            <button type="button" data-role="it" aria-pressed="false">IT support</button>
-            <button type="button" data-role="systems" aria-pressed="false">Systems</button>
-            <button type="button" data-role="cloud" aria-pressed="false">Cloud</button>
-            <button type="button" data-role="devops" aria-pressed="false">DevOps</button>
-          </div>
-          <span class="win" aria-hidden="true"><span class="led" id="match-count" data-ghost="88">10</span></span>
-        </div>
-      </div>
     </div>
 
     <div class="group">
       <div class="group__head"><h3 class="h3">Placement Year</h3><span class="meta">Pickl · August 2026 - Present</span></div>
       <ul class="panel rows">
-        <li class="row" data-roles="it systems">
+        <li class="row">
           <div class="row__main"><h4 class="row__title">Laptop Setup Automation</h4><p class="row__desc">A tailored PowerShell script that sets up a laptop with apps, configurations and a VPN, start to finish. Saves the company over four hours a week.</p></div>
           <p class="meta row__stack">PowerShell · Bash · Intune</p>
           <span class="row__link" aria-hidden="true"></span>
         </li>
-        <li class="row" data-roles="it systems">
+        <li class="row">
           <div class="row__main"><h4 class="row__title">Silent VPN Deployment</h4><p class="row__desc">Pushes an L2TP/IPsec profile from the RMM with its credentials saved, then checks they stuck without prompting anyone.</p></div>
           <p class="meta row__stack">PowerShell · RAS API</p>
           <a class="row__link" href="https://github.com/ajacobs06/ps-silent-vpn-deployment" rel="noopener">Write-up<svg class="ic" viewBox="0 0 256 256" aria-hidden="true"><path d="M200,64V168a8,8,0,0,1-16,0V83.31L69.66,197.66a8,8,0,0,1-11.32-11.32L172.69,72H88a8,8,0,0,1,0-16H192A8,8,0,0,1,200,64Z"/></svg></a>
         </li>
-        <li class="row" data-roles="systems devops">
+        <li class="row">
           <div class="row__main"><h4 class="row__title">AI Agent for the Company</h4><p class="row__desc">Developed an MCP server in Azure, using ACR, to give our agentic models oversight of our tickets.</p></div>
           <p class="meta row__stack">REST APIs · Azure </p>
-          <span class="row__link" aria-hidden="true"></span>
-        </li>
-        <li class="row" data-roles="it cloud">
-          <div class="row__main"><h4 class="row__title">Microsoft 365 and Identity</h4><p class="row__desc">Day-to-day admin of Microsoft 365 and Google Workspace for over 50 SME clients, including Intune and Entra ID.</p></div>
-          <p class="meta row__stack">Entra ID · Intune</p>
-          <span class="row__link" aria-hidden="true"></span>
-        </li>
-        <li class="row" data-roles="it systems">
-          <div class="row__main"><h4 class="row__title">Email Security Rollout</h4><p class="row__desc">Rolled out Barracuda and Mesh for phishing detection and incident response across client tenants.</p></div>
-          <p class="meta row__stack">Barracuda · Mesh</p>
-          <span class="row__link" aria-hidden="true"></span>
-        </li>
-        <li class="row" data-roles="systems">
-          <div class="row__main"><h4 class="row__title">Client Networks</h4><p class="row__desc">Set up and maintain networks of more than 200 devices on UniFi, with Sophos firewalls.</p></div>
-          <p class="meta row__stack">UniFi · Sophos</p>
           <span class="row__link" aria-hidden="true"></span>
         </li>
       </ul>
@@ -122,22 +94,22 @@
     <div class="group">
       <div class="group__head"><h3 class="h3">Personal Projects</h3></div>
       <ul class="panel rows">
-        <li class="row" data-roles="cloud devops">
+        <li class="row">
           <div class="row__main"><h4 class="row__title">Rehearsal Hub <span class="tag"><span class="dot" aria-hidden="true"></span>Live</span></h4><p class="row__desc">Members app for the university barbershop society, running on Azure. Now used by over 30 active members. Infrastructure in Bicep, deployed by GitHub Actions over OIDC with no stored secrets.</p></div>
           <p class="meta row__stack">Azure · Bicep · FastAPI · React · Cosmos DB</p>
           <a class="row__link" href="https://github.com/ajacobs06/rehearsal-hub-showcase" rel="noopener">Code<svg class="ic" viewBox="0 0 256 256" aria-hidden="true"><path d="M200,64V168a8,8,0,0,1-16,0V83.31L69.66,197.66a8,8,0,0,1-11.32-11.32L172.69,72H88a8,8,0,0,1,0-16H192A8,8,0,0,1,200,64Z"/></svg></a>
         </li>
-        <li class="row" data-roles="devops cloud systems">
+        <li class="row">
           <div class="row__main"><h4 class="row__title">Homelab Cluster and My Portfolio <span class="tag"><span class="dot" aria-hidden="true"></span>Live</span></h4><p class="row__desc">Kubernetes across a Proxmox VM and two Raspberry Pis. Flux deploys from Git and a Cloudflare Tunnel publishes it, with no open ports.</p></div>
           <p class="meta row__stack">Kubernetes · Flux · Docker · Cloudflare · Proxmox</p>
           <a class="row__link" href="#infrastructure">How it works<svg class="ic" viewBox="0 0 256 256" aria-hidden="true"><path d="M205.66,149.66l-72,72a8,8,0,0,1-11.32,0l-72-72a8,8,0,0,1,11.32-11.32L120,196.69V40a8,8,0,0,1,16,0V196.69l58.34-58.35a8,8,0,0,1,11.32,11.32Z"/></svg></a>
         </li>
-        <li class="row" data-roles="systems devops">
+        <li class="row">
           <div class="row__main"><h4 class="row__title">Rackdash <span class="tag"><span class="dot" aria-hidden="true"></span>Running</span></h4><p class="row__desc">A touchscreen status board for the homelab. It watches Proxmox, k3s, Home Assistant and the network, and alerts my phone when something drops.</p></div>
           <p class="meta row__stack">Python · FastAPI · Kubernetes API · Proxmox API</p>
           <span class="row__link" aria-hidden="true"></span>
         </li>
-        <li class="row" data-roles="">
+        <li class="row">
           <div class="row__main"><h4 class="row__title">Text-based Game Engine</h4><p class="row__desc">A Java parser that builds a whole adventure game from a single text file.</p></div>
           <p class="meta row__stack">Java · Parsing</p>
           <a class="row__link" href="https://github.com/ajacobs06/Text-Based-Game" rel="noopener">Source<svg class="ic" viewBox="0 0 256 256" aria-hidden="true"><path d="M200,64V168a8,8,0,0,1-16,0V83.31L69.66,197.66a8,8,0,0,1-11.32-11.32L172.69,72H88a8,8,0,0,1,0-16H192A8,8,0,0,1,200,64Z"/></svg></a>

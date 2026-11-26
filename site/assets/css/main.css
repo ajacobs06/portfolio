@@ -209,38 +209,17 @@ button { font: inherit; color: inherit; }
 .section { padding-block: 64px; }
 @media (min-width: 960px) { .section { padding-block: 112px; } }
 .section__head { display: grid; gap: 32px; margin-bottom: 48px; align-items: end; }
-@media (min-width: 960px) { .section__head { grid-template-columns: 1fr auto; } }
-
-/* role filter */
-.filter { display: grid; gap: 8px; }
-.filter__row { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
-.seg { display: inline-flex; flex-wrap: wrap; gap: 4px; padding: 4px; background: var(--alu); border-radius: 12px; }
-.seg button {
-  min-height: 36px;
-  padding: 0 12px;
-  border: 0;
-  border-radius: 8px;
-  background: transparent;
-  font-size: 14px;
-  font-weight: 500;
-  color: var(--alu-ink-2);
-  cursor: pointer;
-  transition: background-color .15s var(--ease), color .15s var(--ease);
-}
-.seg button:hover { color: var(--ink); }
-.seg button[aria-pressed="true"] { background: var(--page); color: var(--ink); box-shadow: 0 1px 2px rgba(0, 0, 0, .06); }
 
 /* project groups as datasheet rows */
 .group + .group { margin-top: 64px; }
 .group__head { display: flex; align-items: baseline; justify-content: space-between; gap: 16px; margin-bottom: 16px; }
 .rows { padding-inline: 24px; }
-.row { display: grid; gap: 12px; padding-block: 24px; border-top: 1px solid var(--alu-line); transition: opacity .2s var(--ease); }
+.row { display: grid; gap: 12px; padding-block: 24px; border-top: 1px solid var(--alu-line); }
 .row:first-child { border-top: 0; }
 .row__title { display: flex; align-items: center; flex-wrap: wrap; gap: 12px; font-size: 18px; font-weight: 500; line-height: 24px; letter-spacing: -.01em; }
 .row__desc { margin-top: 4px; font-size: 15px; line-height: 22px; color: var(--alu-ink-2); max-width: 40rem; text-wrap: pretty; }
 .row__link { display: inline-flex; align-items: center; gap: 8px; justify-self: start; font-size: 14px; font-weight: 500; text-decoration: none; transition: color .15s var(--ease); }
 a.row__link:hover { color: var(--accent-ink); }
-.row.is-off { opacity: .32; }
 .tag { display: inline-flex; align-items: center; gap: 8px; font-size: 13px; font-weight: 500; line-height: 20px; color: var(--alu-muted); }
 .tag .dot { width: 6px; height: 6px; }
 @media (min-width: 900px) {
