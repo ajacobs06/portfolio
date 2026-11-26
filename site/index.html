@@ -95,7 +95,7 @@
       <div class="group__head"><h3 class="h3">Personal Projects</h3></div>
       <ul class="panel rows">
         <li class="row">
-          <div class="row__main"><h4 class="row__title">Rehearsal Hub <span class="tag"><span class="dot" aria-hidden="true"></span>Live</span></h4><p class="row__desc">Members app for the university barbershop society, running on Azure. Now used by over 30 active members. Infrastructure in Bicep, deployed by GitHub Actions over OIDC with no stored secrets.</p></div>
+          <div class="row__main"><h4 class="row__title">Rehearsal Hub <span class="tag"><span class="dot" aria-hidden="true"></span>Live</span></h4><p class="row__desc">Members app for the UoB Barbershop Singing Society, running on Azure. Now used by over 30 active members. Infrastructure in Bicep, deployed by GitHub Actions over OIDC with no stored secrets.</p></div>
           <p class="meta row__stack">Azure · Bicep · FastAPI · React · Cosmos DB</p>
           <a class="row__link" href="https://github.com/ajacobs06/rehearsal-hub-showcase" rel="noopener">Code<svg class="ic" viewBox="0 0 256 256" aria-hidden="true"><path d="M200,64V168a8,8,0,0,1-16,0V83.31L69.66,197.66a8,8,0,0,1-11.32-11.32L172.69,72H88a8,8,0,0,1,0-16H192A8,8,0,0,1,200,64Z"/></svg></a>
         </li>
@@ -124,8 +124,8 @@
       <div class="infra__shell">
         <div class="infra__head">
           <div>
-            <h2 class="h2" id="infra-title">How this website is hosted</h2>
-            <p class="lede lede--dim">A site in nginx, running as three pods on a kubernetes cluster in my homelab. A Cloudflare Tunnel publishes it with no open ports, Flux deploys every change from Git. The dots below light up each time your browser checks in.</p>
+            <h2 class="h2" id="infra-title">How This Website is Hosted</h2>
+            <p class="lede lede--dim">A site in nginx, running as three pods on a kubernetes cluster in my homelab. A Cloudflare Tunnel publishes it with no open ports, and Flux deploys every change from Git. The dots below light up each time your browser checks in.</p>
           </div>
           <dl class="readouts" aria-label="Cluster status">
             <div class="readout"><dt>Nodes</dt><dd><span class="win win--lg"><span class="led" data-ghost="8">3</span></span></dd></div>
@@ -142,7 +142,7 @@
           <li class="hop"><span class="hop__dot" aria-hidden="true"></span><span class="hop__lab">Compute</span><strong>Nodes</strong><p>A Proxmox VM and two Raspberry Pis.</p></li>
         </ol>
 
-        <p class="infra__foot"><span class="infra__foot-lab">Deploys</span><span>git push, then GitHub Actions builds for amd64 and arm64, GHCR stores the image and Flux applies it. Rolling back is one git revert.</span></p>
+        <p class="infra__foot"><span class="infra__foot-lab">Deploys</span><span>Run git push, then GitHub Actions builds it for amd64 and arm64. GHCR stores the image and Flux automatically applies it. Rolling back is one git revert.</span></p>
       </div>
     </div>
   </section>
@@ -151,8 +151,8 @@
   <section class="section wrap" id="about" data-section="about" aria-labelledby="about-title">
     <div class="about">
       <div class="about__intro">
-        <h2 class="h2" id="about-title">Computer science student, working engineer</h2>
-        <p class="lede">I'm in the third year of four at Birmingham, spending it as an IT engineer. I work on site handling large scale projects, as well as handling infrastructure and support tickets remotely.</p>
+        <h2 class="h2" id="about-title">Computer Science Student, Working Engineer</h2>
+        <p class="lede">I'm in my 3rd year at UoB, spending it as an IT engineer. I work on site handling large scale projects, as well as handling infrastructure and support tickets remotely.</p>
         <dl class="skills" aria-label="What I work with">
           <div><dt>Endpoints and identity</dt><dd>Intune, Entra ID, Microsoft 365, Google Workspace</dd></div>
           <div><dt>Networks and security</dt><dd>UniFi, Sophos, Barracuda, Mesh, WireGuard, Cloudflare</dd></div>
