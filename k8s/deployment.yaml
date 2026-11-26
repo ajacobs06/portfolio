@@ -27,7 +27,7 @@ spec:
               app: portfolio
       containers:
         - name: portfolio
-          image: ghcr.io/ajacobs06/portfolio:e8852141deec3a91f844800d521cf6f0eac3345e
+          image: ghcr.io/ajacobs06/portfolio:10d14aad226ca699da6c53b2ee0f54b586eb84c6
           ports:
             - containerPort: 80
           env:
